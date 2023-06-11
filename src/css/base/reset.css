@@ -3,8 +3,8 @@
   /* Colores */
   --negro         : #393939;
   --blanco        :#ececec;
-  --whitePlus     : #fff;
-  --blackPlus     :  #000;
+  --blancoPlus     : #fff;
+  --negroPlus     :  #000;
 
   
   /* Tipografía */
@@ -17,8 +17,8 @@
   :root{
       --negro         : #ececec;
       --blanco        :#393939;
-      --whitePlus     : #000;
-      --blackPlus     :  #fff;
+      --blancoPlus     : #000;
+      --negroPlus     :  #fff;
 
   }
 }

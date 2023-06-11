@@ -8,8 +8,12 @@
 /* utilities import */
 @import 'utilities/utilities.css';
 
+@import 'components/card.css';
+
 body {
   font-family: "Montserrat" , serif;
   background-color: var(--body--color);
+  color: var(--negroPlus);
+  background: var(--blancoPlus);
 }
 
