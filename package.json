@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postcss": "postcss src/css/postcss.css -o public/assets/css/style.css -w"
+    "postcss": "postcss --watch src/css/postcss.css -o public/assets/css/style.css"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "postcss-import": "^15.1.0",
     "postcss-mixins": "^9.0.4",
     "postcss-nested": "^6.0.1",
-    "postcss-preset-env": "^8.4.2"
+    "postcss-preset-env": "^8.4.2",
+    "postcss-simple-vars": "^7.0.1"
   }
 }

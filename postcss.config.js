@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
     'postcss-import': {},
+    'postcss-simple-vars': {},
     'postcss-mixins': {},
     'postcss-nested': {},
     'postcss-extend-rule': {},
@@ -8,6 +9,6 @@ module.exports = {
     'cssnano': {},
     'postcss-preset-env': {
       stage: 3
-    }
+    },
   }
 }

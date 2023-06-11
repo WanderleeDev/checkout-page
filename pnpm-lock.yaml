@@ -28,6 +28,9 @@ devDependencies:
   postcss-preset-env:
     specifier: ^8.4.2
     version: 8.4.2(postcss@8.4.24)
+  postcss-simple-vars:
+    specifier: ^7.0.1
+    version: 7.0.1(postcss@8.4.24)
 
 packages:
 
