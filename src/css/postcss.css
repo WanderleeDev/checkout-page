@@ -7,8 +7,11 @@
 @import 'abstracts/mixins.css';
 /* utilities import */
 @import 'utilities/utilities.css';
-
+/* form */
+@import 'components/form.css';
 @import 'components/card.css';
+@import 'components/questionContainer.css';
+@import 'components/btn.css';
 
 body {
   font-family: "Montserrat" , serif;
@@ -16,4 +19,3 @@ body {
   color: var(--negroPlus);
   background: var(--blancoPlus);
 }
-
