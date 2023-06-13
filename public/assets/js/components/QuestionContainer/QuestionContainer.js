@@ -1,4 +1,4 @@
-const QuestionContainer = (description, alt, img, type) => {
+const QuestionContainer = (description, alt, img, type, err) => {
 
   const tempContainer = `
   <div class="question">
@@ -8,7 +8,7 @@ const QuestionContainer = (description, alt, img, type) => {
       <input id=${alt} class="question-input" type=${type} placeholder="Enter your ${description.toLowerCase()}.." required name=${alt}>
       <div class="validityMessage">
         <p class="valid">* Formato válido</p>
-        <p class="error"></p>
+        <p class="error">* ${err}</p>
       </div>
     </label>
   </div>

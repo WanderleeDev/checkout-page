@@ -10,10 +10,10 @@ const Form = () =>{
       <legend class="form-subTitle">Contact infomation</legend>
       ${
         dataInput.slice(0,2).map((data)=> {
-          const {img, alt, type, description} = data;
+          const {img, alt, type, description, err} = data;
           
           return(`
-            ${QuestionContainer(description,alt,img,type)}
+            ${QuestionContainer(description,alt,img,type,err)}
           `)
         }).join('')
       }
@@ -22,10 +22,10 @@ const Form = () =>{
     <legend class="form-subTitle">Shipping address</legend>
     ${
       dataInput.slice(2).map((data)=> {
-        const {img, alt, type, description} = data;
+        const {img, alt, type, description, err} = data;
         
         return(`
-          ${QuestionContainer(description,alt,img,type)}
+          ${QuestionContainer(description,alt,img,type,err)}
         `)
       }).join('')
     }

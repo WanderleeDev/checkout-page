@@ -5,17 +5,27 @@
 /* abstracts import */
 @import 'abstracts/variables.css';
 @import 'abstracts/mixins.css';
-/* utilities import */
-@import 'utilities/utilities.css';
+
+/* layout */
+@import 'layout/header.css';
 /* form */
 @import 'components/form.css';
+@import 'components/cardShop.css';
 @import 'components/card.css';
+@import 'components/dataShop.css';
 @import 'components/questionContainer.css';
 @import 'components/btn.css';
 
+/* utilities import */
+@import 'utilities/paddingTop.css';
+
 body {
+  @mixin grid 1, 1fr, 1.5rem;
+  width: min-content;
+  display: grid;
   font-family: "Montserrat" , serif;
   background-color: var(--body--color);
   color: var(--negroPlus);
   background: var(--blancoPlus);
+  margin: 2rem auto 0;
 }

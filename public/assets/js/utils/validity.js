@@ -30,10 +30,16 @@ const validity = Object.freeze({
 
   validate: function validate(target, type) {
 
-    if (this[type].regex.test(target)) {
-      console.log(true);
+    const valid = target.parentNode.querySelector('.valid');
+    const err = target.parentNode.querySelector('.error');
+
+    if (this[type].regex.test(target.value)) {
+      valid.style.display ='block';
+      err.style.display ='none';
+
     }else{
-      console.log(false);
+      valid.style.display ='none';
+      err.style.display ='block';
     }
   }
 
