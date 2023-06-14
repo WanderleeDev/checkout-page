@@ -29,20 +29,38 @@ const validity = Object.freeze({
   },
 
   validate: function validate(target, type) {
-
     const valid = target.parentNode.querySelector('.valid');
     const err = target.parentNode.querySelector('.error');
-
+    
     if (this[type].regex.test(target.value)) {
       valid.style.display ='block';
       err.style.display ='none';
 
+      this.setValue(target.value, type);
+
     }else{
       valid.style.display ='none';
       err.style.display ='block';
-    }
-  }
 
+      this.setValue(null, type);
+
+    }
+  },
+
+  setValue: function setValue(newValue, index) {
+   this.newData[index] = newValue;
+    console.log(this.newData);
+  },
+
+  newData:{
+    email:null,
+    phone:null,
+    fullName:null,
+    address: null,
+    city:null,
+    country:null,
+    postalCode: null
+  }
 });
 
 export default validity;
