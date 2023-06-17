@@ -1,19 +1,36 @@
-//import validity from "./validity.js";
-import {validateAllInputs} from "./listenerInputForm.js";
+import { validateAllInputs } from "./listenerInputForm.js";
+import addBlock from "./addBlock.js";
+import Modal from "../components/Modal/Modal.js";
 
-function submitForm(targetElement) {
-  const element = document.querySelector(targetElement);
+async function submitForm(targetElement) {
+  const formTag = document.querySelector(targetElement);
   let newData = null;
 
-  element.addEventListener('click', (event)  => {
-    event.preventDefault();
-    const newTarget = event.target; 
+  await new Promise((resolve, reject) => {
+    formTag.addEventListener('click', async (event) => {
+      event.preventDefault();
 
-    if (newTarget.type === 'submit') {
-      return newData = validateAllInputs('.question-input');
-    }
-    console.log(newData);
+      if (event.target.type === 'submit') {
+        try {
+          newData = await validateAllInputs('.question-input');
+          resolve(); 
+        } catch (error) {
+          reject(error);
+        }
+      }
+
+      if (newData) {
+
+        console.log(true);  
+      }else{
+        console.log(false);
+      }
+
+    });
   });
+
+  return newData; // Devuelve el valor de newData
 }
 
 export default submitForm;
+

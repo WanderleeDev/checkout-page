@@ -14,8 +14,10 @@ export function validateAllInputs(elementTarget) {
   const inputs = document.querySelectorAll(elementTarget);
 
   Array.from(inputs).map((input) => {
-    return validity.validate(input, input.name);
+    validity.validate(input, input.name);
   });
+
+  return validity.getValue();
 }
 
 export default listenerInputForm

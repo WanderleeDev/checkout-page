@@ -48,8 +48,11 @@ const validity = Object.freeze({
   },
 
   setValue: function setValue(newValue, index) {
-   this.newData[index] = newValue;
-    console.log(this.newData);
+    this.newData[index] = newValue;
+  },
+
+  getValue: function getValue(){
+    return this.newData;
   },
 
   newData:{

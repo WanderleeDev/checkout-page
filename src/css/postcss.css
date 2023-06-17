@@ -16,8 +16,12 @@
 @import 'components/questionContainer.css';
 @import 'components/btn.css';
 
+/* Window modal */
+@import 'components/modal.css';
+
 /* utilities import */
 @import 'utilities/paddingTop.css';
+
 
 body {
   @mixin grid 1, 1fr, 1.5rem;
