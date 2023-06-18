@@ -1,4 +1,4 @@
-const Modal = ()=>{
+const Modal = (message)=>{
 
   const tempContainer = `
   <div class="modal">
@@ -7,12 +7,12 @@ const Modal = ()=>{
     x
     </button>
     <div class="modal-content">
-    <p class="modal-text">Complete o corriga los espacios marcados en el formulario</p>
+    <p class="modal-text">${message}</p>
     </div>
     </div>
   </div>
   `
-  return tempContainer.trim()
+  return tempContainer.trim();
 }
 
   export default Modal;

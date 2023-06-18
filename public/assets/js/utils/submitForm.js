@@ -1,6 +1,5 @@
 import { validateAllInputs } from "./listenerInputForm.js";
-import addBlock from "./addBlock.js";
-import Modal from "../components/Modal/Modal.js";
+import conditionalRender from "./renderModal.js";
 
 async function submitForm(targetElement) {
   const formTag = document.querySelector(targetElement);
@@ -10,27 +9,20 @@ async function submitForm(targetElement) {
     formTag.addEventListener('click', async (event) => {
       event.preventDefault();
 
-      if (event.target.type === 'submit') {
-        try {
-          newData = await validateAllInputs('.question-input');
-          resolve(); 
-        } catch (error) {
-          reject(error);
+      try {
+
+        if (event.target.type === 'submit') {
+            newData = await validateAllInputs('.question-input');
+            conditionalRender(newData);
+            resolve(); 
         }
+
+      } catch (error) {
+        reject(error);
       }
-
-      if (newData) {
-
-        console.log(true);  
-      }else{
-        console.log(false);
-      }
-
     });
   });
-
   return newData; // Devuelve el valor de newData
 }
 
 export default submitForm;
-
