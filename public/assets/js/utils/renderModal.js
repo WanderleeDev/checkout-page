@@ -1,7 +1,5 @@
-import addBlock from "./addBlock.js";
-import Modal from "../components/Modal/Modal.js";
+
 import eventModal from "./eventModal.js";
-eventModal
 
 //verifica que las propiedades de un objeto sean true
 function checkObject(object) {
@@ -15,18 +13,22 @@ function checkObject(object) {
 }
 
 
-//renderiza una ventana modal con un mensaje personalizado dependiendo si es true o false
+//verifica que el objeto tenga las propiedades requeridas para mostrar la ventana modal.
+//si no, muestra la ventana modal con el mensaje personalizado.
+//si si, muestra la ventana modal con el mensaje de registro exitoso.
 function conditionalRender(obj) {
+  
   const isValid = checkObject(obj);
-  const invalidMsn = 'Complete o corriga los espacios marcados en el formulario';
+  const modal =  document.querySelector('.modal');
+  const invalidMsn = 'Complete o corrija los espacios marcados en el formulario';
   const validMsn = 'Registro exitoso';
 
   if (isValid) {
-    addBlock('#app',Modal(validMsn), 'afterbegin' );
-    eventModal();
+    modal.classList.add('show');
+    eventModal(modal, validMsn);
   }else{
-    addBlock('#app',Modal(invalidMsn), 'afterbegin' );
-    eventModal();
+    modal.classList.add('show');
+    eventModal(modal, invalidMsn);
   }
   
 }
