@@ -3,7 +3,7 @@ import Form from "./Form/Form.js";
 import Modal from "./Modal/Modal.js";
 
 const Main = `
-  ${Modal()}
+  ${Modal}
   ${CardShop()}
   ${Form()}
   `;
