@@ -19,7 +19,8 @@ const CardShop = () => {
     </div>
     <div class="cardShop-subSection">
       ${
-        [DataShop('Shipping'), DataShop('Total')].join('')
+        [DataShop('Shipping',19, 'shipping'), 
+        DataShop('Total',0, 'totalPrice')].join('')
       }
     </div>
   </div>

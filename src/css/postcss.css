@@ -1,13 +1,14 @@
 /* base imports */
 @import 'base/reset.css';
 @import 'base/typography.css';
-@import 'base/mediaQueries.css';
 /* abstracts import */
 @import 'abstracts/variables.css';
 @import 'abstracts/mixins.css';
 
 /* layout */
 @import 'layout/header.css';
+@import 'layout/main.css';
+@import 'layout/footer.css';
 /* form */
 @import 'components/form.css';
 @import 'components/cardShop.css';
@@ -32,4 +33,9 @@ body {
   color: var(--negroPlus);
   background: var(--blancoPlus);
   margin: 2rem auto 0;
+
+  @media screen and (min-width: 56.25rem) {
+    width: 55rem;
+    grid-template-columns: repeat(2,1fr);
+  }
 }
