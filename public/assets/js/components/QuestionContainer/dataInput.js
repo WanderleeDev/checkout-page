@@ -39,12 +39,12 @@ const dataInput =[
     alt: "country",
     type: "text",
     description: "Country",
-    err: 'Solo letras sin caracteres especiales'
+    err: 'Seleccione un país'
   },
   {
     img: "./public/assets/img/mailbox.svg",
     alt: "postalCode",
-    type: "number",
+    type: "text",
     description: "Postal code",
     err: 'Debe contener 5 dígitos'
   }

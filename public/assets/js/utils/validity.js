@@ -12,20 +12,20 @@ const validity = Object.freeze({
     err: 'mínimo 1 nombre y apellido'
   },
   address:{
-    regex: /^[a-zA-Z0-9]+$/,
+    regex: /^[\w\s.-]+$/,
     err: 'Solo números y letras'
   },
   city:{
     regex: /^[0-9A-Za-z#-]+$/,
-    err: 'Solo números, letras y caracteres válidos(#-)'
+    err: 'Solo números, letras y caracteres válidos(#-.)'
   },
   country:{
-    regex: /^[a-zA-Z.]+$/,
-    err: 'Solo letras sin caracteres especiales'
+    regex: /^[^-]+$/,
+    err: 'Debes seleccionar una opción'
   },
   postalCode:{
-    regex: /^\d{5}$/,
-    err: 'Debe contener 5 dígitos'
+    regex: /^\d{3,5}$/,
+    err: 'Debe contener de 3 a 5 dígitos'
   },
 
   validate: function validate(target, type) {
@@ -63,7 +63,7 @@ const validity = Object.freeze({
     city:null,
     country:null,
     postalCode: null
-  }
+  }     
 });
 
 export default validity;

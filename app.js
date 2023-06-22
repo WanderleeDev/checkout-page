@@ -6,7 +6,7 @@ import  listenerInputForm  from "./public/assets/js/utils/listenerInputForm.js";
 import submitForm from "./public/assets/js/utils/submitForm.js";
 import counter from "./public/assets/js/utils/counter.js";
 import { totalPrice } from "./public/assets/js/utils/updateData.js";
-
+import validitySelect from "./public/assets/js/utils/validitySelect.js";
 
 //Header agregado
 addBlock('.hero',Header, 'afterbegin' );
@@ -21,5 +21,7 @@ counter();
 totalPrice('.btn');
 //Agregar eventos escucha para validar cada input del formulario
 listenerInputForm('.question-input');
+//valida que el select tenga un valor
+validitySelect();
 //Maneja el envió del formulario
 submitForm('.form');
