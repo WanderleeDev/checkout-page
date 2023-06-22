@@ -1,5 +1,3 @@
-import totalPrice from "../utils/totalPrice";
-
 function counter() {
   const numberBox = document.querySelectorAll(".card-productNumber");
 
@@ -7,7 +5,6 @@ function counter() {
     const price = number.closest('.card').querySelector(".card-price");
     increaseNumber(number, price);
     decreaseNumber(number, price); 
-    console.log(totalPrice);
   });
 }
 
@@ -21,7 +18,7 @@ function increaseNumber(targetElement,price) {
     targetElement.textContent = number+ 1;
     
     //Pone un limite de 10
-    if (number === 19) {
+    if (number === 10) {
       targetElement.textContent = 10;
       return;
     }
@@ -29,8 +26,6 @@ function increaseNumber(targetElement,price) {
     //Actualizar el precio de producto
     const newPrice =  priceBase + parseFloat(price.textContent);
     price.textContent = newPrice.toFixed(2);
-
-    totalPrice();
   });
 }
 
@@ -52,8 +47,6 @@ function decreaseNumber(targetElement, price) {
      //Actualizar el precio de producto
     const newPrice =  parseFloat(price.textContent) - priceBase;
     price.textContent = newPrice.toFixed(2);
-
-    totalPrice();
   });
 }
 

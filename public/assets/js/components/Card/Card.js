@@ -15,9 +15,9 @@ const Card = ( img, title, price, previousPrice ) => {
       </div>
 
       <div class="card-containerBtn">
-        <button class="card-btnMinus">-</button>
+        <button class="card-btnMinus btn">-</button>
         <span class="card-productNumber">1</span>
-        <button class="card-btnAdd" >+</button>
+        <button class="card-btnAdd btn" >+</button>
       </div>
     </div>
   </div>

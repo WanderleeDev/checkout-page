@@ -8,17 +8,14 @@ async function submitForm(targetElement) {
   await new Promise((resolve, reject) => {
     formTag.addEventListener('click', async (event) => {
       event.preventDefault();
-
       try {
-
         if (event.target.type === 'submit') {
             newData = await validateAllInputs('.question-input');
             conditionalRender(newData);
             resolve(); 
         }
-
       } catch (error) {
-        reject(error);
+          reject(error);
       }
     });
   });

@@ -1,8 +1,7 @@
 import formatData from "./formatData.js";
 import formatPrice from "./intlApi.js";
 
-formatData
-const  totalPrice = () => {
+const  sumPrice = () => {
   const data =  document.querySelectorAll('.card-price');
   const target = document.querySelector('.totalPrice');
   const shipping =formatData(document.querySelector('.shipping').textContent);
@@ -16,4 +15,4 @@ const  totalPrice = () => {
   target.textContent =  formatPrice(total);
 }
 
-export default totalPrice;
+export default sumPrice;

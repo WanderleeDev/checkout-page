@@ -1,4 +1,5 @@
 import formatPrice from "./intlApi.js";
+import sumPrice from "./sumPrice.js";
 
 export function increaseNumber(element, price, base) {
   const number = parseInt(element.textContent);
@@ -25,6 +26,12 @@ export function updatePrice(toUpdate,baseNumber, dataNumber){
   toUpdate.textContent = formatPrice(parseFloat(data.toFixed(2)));
 }
 
-function totalPrice(params) {
-  const total = document.querySelector('.totalPrice');
+export function totalPrice(elements) {
+  const target = document.querySelectorAll(elements);
+
+  target.forEach((t)=>{
+    t.addEventListener('click',()=>{
+    sumPrice();
+    });
+  });
 }
