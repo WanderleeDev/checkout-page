@@ -1,0 +1,14 @@
+.subContainer{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  input,
+  select{
+    color: var(--negrp) !important ;
+    width: 10.4rem;
+    :nth-child(1){
+      font-size: 0.8rem;
+      color: #757575 ;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.dataShop{
+  display: flex;
+  border-top: dotted 2px #BDBDBD;
+  width: 100%;
+  justify-content: space-between;
+
+  &-info,
+  &-previousPrice{
+    padding: 0.6rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}

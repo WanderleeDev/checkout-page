@@ -1,0 +1,14 @@
+.BtnContainer{
+  justify-self: flex-end;
+  font-size: 1rem;
+  font-weight: 600;
+  &-submit{
+    width: 166px;
+    height: 54px;
+    background-color: var(--clr--primary);
+    cursor: pointer;
+    border-radius: 0.75rem;
+    color: var(--blanco);
+    font-weight: 600;
+  }
+}

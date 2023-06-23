@@ -6,7 +6,7 @@ select.addEventListener('change',()=>{
     const valid = sibling.querySelector('.valid');
     const err = sibling.querySelector('.error');
   
-    if(select.value == '-select an option-'){
+    if(select.value === '-select an option-'){
       valid.classList.add('hidden');
       err.classList.add('appear');
     }else{

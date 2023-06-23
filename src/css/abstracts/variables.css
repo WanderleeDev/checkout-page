@@ -1,0 +1,18 @@
+:root{
+  --clr--primary : #F2994A;
+  --clr--secundaryLigth : #F2F2F2;
+  --clr--secundary : #E0E0E0;
+  --clr--secundaryBold: #828282;
+  --body--color : #fff;
+  --clr--focus : #F2994A;
+  --clr-blackTransparente: rgba(0, 0, 0, .4);
+
+  @media (prefers-color-scheme: dark) {
+    --clr--secundaryLigth : #292929;
+    --clr--secundary : #696969;
+    --clr--focus : transparent;
+    --clr-blackTransparente: rgba(255, 255, 255, 0.4);
+  }
+
+}
+

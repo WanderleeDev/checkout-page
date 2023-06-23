@@ -1,0 +1,22 @@
+.cardShop{
+  @mixin grid 1, 1fr, 4rem;
+  width: min(21.8rem, 100%);
+  background-color: var(--clr--secundaryLigth);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-inline: auto;
+  @media screen and (min-width: 56.25rem) {
+    margin-inline: initial;
+    height: 31.25rem;
+  }
+
+  &-subSection{
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+
+    &:nth-child(2){
+      gap: 0rem;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.paddingTop{
+  padding-top: 5rem;
+    @media screen and (min-width: 56.25rem) {
+    padding: 5rem 0 2rem 0;
+    }
+  }
+
+.paddingTop--1rem{
+  padding-top: 1rem;
+}

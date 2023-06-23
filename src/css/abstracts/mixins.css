@@ -1,0 +1,16 @@
+@define-mixin flex $diretion, $gap{
+  
+  display: flex;
+  flex-flow: $diretion wrap;
+  gap: $gap;
+}
+
+@define-mixin grid $numberCol, $sizeCol, $gap {
+  
+  display: grid;
+  grid-template-columns: repeat($numberCol, $sizeCol);
+  gap: $gap;
+  place-items: center;
+  
+  @mixin-content;
+}

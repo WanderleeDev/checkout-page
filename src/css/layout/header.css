@@ -1,0 +1,15 @@
+.header{
+  justify-self: flex-start;
+  
+  &-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+  @media screen and (min-width: 56.25rem) {
+    font-size: 2.25rem;
+  }
+  }
+
+  @media screen and (min-width: 56.25rem) {
+    grid-area: 1/1/2/3;
+  }
+}

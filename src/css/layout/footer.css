@@ -1,0 +1,17 @@
+.footer{
+  text-align: center;
+  @media screen and (min-width: 56.25rem) {
+    grid-column: 1/end;
+  }
+
+  &-info{
+    color: #bdbdbd;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  &-autor{
+    color: var(--negro);
+    text-decoration: underline;
+  }
+}
